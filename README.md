@@ -71,11 +71,8 @@ The intention was to maximize GPU utilization and batching efficiency while rema
 │ └── cache-scheduler-state.png
 │
 ├── tables/
-│ ├── capacity-zones.md
-│ └── latency-ttft-summary.md
-│
-└── notes/
-└── limitations.md
+│ ├── env-config.md
+│ └── test-param.md
 ```
 ---
 
@@ -94,9 +91,10 @@ Each test simulates:
 
 | Test | Purpose |
 |----|-------|
-| Test 1 | Baseline validation & environment sanity check |
-| Test 2 | Stable high-concurrency reference baseline |
-| Test 3 | Intentional saturation & throughput ceiling discovery |
+| Test 1 | Baseline validation & environment sanity check | 500 VUs	Validate load generator stability  |
+| Test 2 | Stable high-concurrency reference baseline |  2×500 VUs	Stable high-load scaling  |
+| Test 3 | Intentional saturation & throughput ceiling discovery |  2×1000 VUs	Intentional saturation  |
+
 
 > **Important:**  
 > Early failures in Test 1 were caused by **OOMKilled load-generator pods**, not backend saturation. This distinction is critical when interpreting results.
@@ -147,8 +145,6 @@ These tables are derived from dashboard observations and are meant to support **
 - Single model configuration (GPT-OSS-120B)  
 - Results depend on prompt length, output length, and streaming behavior  
 - No comparison across inference engines or GPU types  
-
-See `notes/limitations.md` for details.
 
 ---
 
