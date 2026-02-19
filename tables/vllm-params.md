@@ -6,4 +6,4 @@
 | Maximum Number of Batched Tokens    | 8k            |
 | Maximum Number of Sequences        | 512        |
 | GPU Memory Utilization       | 0.95 |
-| Cuda Graph Ssizes  | 2048                 |
+| Cuda Graph Sizes  | 2048                 |
