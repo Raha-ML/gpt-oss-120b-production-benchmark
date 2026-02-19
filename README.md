@@ -47,11 +47,11 @@ All results are **context-dependent** and tied to the described hardware, model,
 
 These parameters were held constant across all tests:
 
-max-model-len = 10000
-max-num-batched-tokens = 8000
-max-num-seqs = 512
-gpu-memory-utilization = 0.95
-cuda-graph-sizes = 2048
+- max-model-len = 10000
+- max-num-batched-tokens = 8000
+- max-num-seqs = 512
+- gpu-memory-utilization = 0.95
+- cuda-graph-sizes = 2048
 
 The intention was to maximize GPU utilization and batching efficiency while remaining realistic for production inference.
 
@@ -59,7 +59,7 @@ The intention was to maximize GPU utilization and batching efficiency while rema
 
 ## Repository Structure
 
-.
+```
 ├── load-tests/
 │ ├── k6-test1-baseline.js
 │ ├── k6-test2-stable.js
@@ -76,7 +76,7 @@ The intention was to maximize GPU utilization and batching efficiency while rema
 │
 └── notes/
 └── limitations.md
-
+```
 ---
 
 ## Load Tests
